@@ -1,0 +1,220 @@
+{
+  "tokens": {
+    "color": {
+      "primary": {
+        "value": "#4CAF50",
+        "description": "Color principal utilizado para acciones principales y elementos destacados."
+      },
+      "primary-dark": {
+        "value": "#45a049",
+        "description": "Variante oscura del color principal para estados hover."
+      },
+      "primary-light": {
+        "value": "#E8F5E9",
+        "description": "Variante clara del color principal para fondos o bordes sutiles."
+      },
+      "secondary": {
+        "value": "#2196F3",
+        "description": "Color secundario utilizado para acciones secundarias y elementos interactivos."
+      },
+      "secondary-dark": {
+        "value": "#1976D2",
+        "description": "Variante oscura del color secundario para estados hover."
+      },
+      "error": {
+        "value": "#F44336",
+        "description": "Color utilizado para indicar errores o acciones destructivas."
+      },
+      "error-dark": {
+        "value": "#D32F2F",
+        "description": "Variante oscura del color de error para estados hover."
+      },
+      "warning": {
+        "value": "#FF9800",
+        "description": "Color utilizado para advertencias o acciones de riesgo."
+      },
+      "success": {
+        "value": "#4CAF50",
+        "description": "Color utilizado para indicar éxito o acciones completadas."
+      },
+      "text": {
+        "primary": {
+          "value": "#333333",
+          "description": "Color principal para texto en la interfaz."
+        },
+        "secondary": {
+          "value": "#757575",
+          "description": "Color secundario para texto menos relevante."
+        },
+        "disabled": {
+          "value": "#999999",
+          "description": "Color para texto en elementos deshabilitados."
+        },
+        "inverse": {
+          "value": "#FFFFFF",
+          "description": "Color para texto sobre fondos oscuros."
+        },
+        "placeholder": {
+          "value": "#999999",
+          "description": "Color para texto placeholder en campos de entrada."
+        }
+      },
+      "background": {
+        "primary": {
+          "value": "#FFFFFF",
+          "description": "Color principal para fondos de la interfaz."
+        },
+        "secondary": {
+          "value": "#F5F5F5",
+          "description": "Color secundario para fondos de elementos como tarjetas o modales."
+        },
+        "disabled": {
+          "value": "#F5F5F5",
+          "description": "Color para fondos de elementos deshabilitados."
+        },
+        "overlay": {
+          "value": "rgba(0,0,0,0.5)",
+          "description": "Color para overlays de modales o diálogos."
+        }
+      },
+      "border": {
+        "primary": {
+          "value": "#E0E0E0",
+          "description": "Color principal para bordes de elementos."
+        },
+        "secondary": {
+          "value": "#CCCCCC",
+          "description": "Color secundario para bordes de elementos menos relevantes."
+        },
+        "focus": {
+          "value": "#2196F3",
+          "description": "Color para bordes de elementos en estado focus."
+        },
+        "error": {
+          "value": "#F44336",
+          "description": "Color para bordes de elementos en estado error."
+        }
+      }
+    },
+    "typography": {
+      "font-family": {
+        "primary": {
+          "value": "'Roboto', sans-serif",
+          "description": "Familia de fuente principal para la interfaz."
+        }
+      },
+      "font-size": {
+        "small": {
+          "value": "12px",
+          "description": "Tamaño de fuente pequeño para texto secundario."
+        },
+        "medium": {
+          "value": "14px",
+          "description": "Tamaño de fuente medio para texto principal."
+        },
+        "large": {
+          "value": "16px",
+          "description": "Tamaño de fuente grande para títulos o texto destacado."
+        },
+        "x-large": {
+          "value": "20px",
+          "description": "Tamaño de fuente extra grande para títulos principales."
+        }
+      },
+      "font-weight": {
+        "light": {
+          "value": 300,
+          "description": "Peso ligero para texto secundario."
+        },
+        "regular": {
+          "value": 400,
+          "description": "Peso regular para texto principal."
+        },
+        "medium": {
+          "value": 500,
+          "description": "Peso medio para texto destacado."
+        },
+        "bold": {
+          "value": 700,
+          "description": "Peso bold para títulos o texto importante."
+        }
+      }
+    },
+    "spacing": {
+      "xx-small": {
+        "value": "4px",
+        "description": "Espaciado extra pequeño."
+      },
+      "x-small": {
+        "value": "8px",
+        "description": "Espaciado pequeño."
+      },
+      "small": {
+        "value": "12px",
+        "description": "Espaciado pequeño-mediano."
+      },
+      "medium": {
+        "value": "16px",
+        "description": "Espaciado mediano."
+      },
+      "large": {
+        "value": "24px",
+        "description": "Espaciado grande."
+      },
+      "x-large": {
+        "value": "32px",
+        "description": "Espaciado extra grande."
+      },
+      "xx-large": {
+        "value": "48px",
+        "description": "Espaciado extra extra grande."
+      }
+    },
+    "border": {
+      "radius": {
+        "small": {
+          "value": "4px",
+          "description": "Radio pequeño para bordes de elementos."
+        },
+        "medium": {
+          "value": "8px",
+          "description": "Radio mediano para bordes de elementos."
+        },
+        "large": {
+          "value": "16px",
+          "description": "Radio grande para bordes de elementos."
+        },
+        "circle": {
+          "value": "50%",
+          "description": "Radio para elementos circulares."
+        }
+      },
+      "width": {
+        "thin": {
+          "value": "1px",
+          "description": "Ancho fino para bordes."
+        },
+        "thick": {
+          "value": "2px",
+          "description": "Ancho grueso para bordes."
+        }
+      }
+    },
+    "shadow": {
+      "small": {
+        "value": "0 2px 4px rgba(0,0,0,0.1)",
+        "description": "Sombra pequeña para elementos como tarjetas."
+      },
+      "medium": {
+        "value": "0 4px 8px rgba(0,0,0,0.15)",
+        "description": "Sombra mediana para elementos destacados."
+      }
+    },
+    "opacity": {
+      "disabled": {
+        "value": 0.5,
+        "description": "Opacidad para elementos deshabilitados."
+      }
+    }
+  }
+}

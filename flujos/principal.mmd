@@ -1,0 +1,94 @@
+```mermaid
+flowchart TD
+    A([Inicio]) --> B[Pantalla de Inicio de Sesión]
+    B -->|Credenciales válidas| C[Dashboard Principal]
+    B -->|Error de autenticación| D[Pantalla de Error: Credenciales Inválidas]
+    D -->|Reintentar| B
+    
+    C -->|Seleccionar Portafolio| E[Detalle del Portafolio]
+    E -->|Actualizar Rendimiento| F[Cálculo de Rendimiento]
+    F -->|Éxito| G[Visualización de Resultados]
+    F -->|Error en Cálculo| H[Pantalla de Error: Datos No Disponibles]
+    H -->|Reintentar| E
+    
+    C -->|Ver Historial| I[Historial de Transacciones]
+    I -->|Filtrar por Fecha| J[Resultados Filtrados]
+    J -->|Exportar Datos| K[Confirmación de Exportación]
+    
+    C -->|Configuración| L[Pantalla de Configuración]
+    L -->|Guardar Cambios| M[Confirmación de Configuración]
+    L -->|Cancelar| C
+    
+    G -->|Volver al Dashboard| C
+    K -->|Volver al Dashboard| C
+    M -->|Volver al Dashboard| C
+
+    style A fill:#4CAF50,stroke:#388E3C,color:#FFFFFF
+    style B fill:#2196F3,stroke:#1976D2,color:#FFFFFF
+    style C fill:#FFC107,stroke:#FFA000,color:#000000
+    style D fill:#F44336,stroke:#D32F2F,color:#FFFFFF
+    style E fill:#9C27B0,stroke:#7B1FA2,color:#FFFFFF
+    style F fill:#673AB7,stroke:#5E35B1,color:#FFFFFF
+    style G fill:#009688,stroke:#00796B,color:#FFFFFF
+    style H fill:#FF5722,stroke:#E64A19,color:#FFFFFF
+    style I fill:#3F51B5,stroke:#303F9F,color:#FFFFFF
+    style J fill:#795548,stroke:#5D4037,color:#FFFFFF
+    style K fill:#00BCD4,stroke:#0097A7,color:#FFFFFF
+    style L fill:#607D8B,stroke:#455A64,color:#FFFFFF
+    style M fill:#8BC34A,stroke:#689F38,color:#FFFFFF
+```
+
+## Descripción del Flujo Principal
+
+### **Pantallas y Estados**
+1. **Pantalla de Inicio de Sesión** (`B`)
+   - **Estado Default**: Campos para ingresar credenciales (usuario y contraseña).
+   - **Estado Error**: Mensaje de error "Credenciales inválidas" cuando el usuario ingresa datos incorrectos.
+   - **Acción Primaria**: Botón "Iniciar Sesión".
+
+2. **Dashboard Principal** (`C`)
+   - **Estado Default**: Resumen de portafolios disponibles, métricas clave (rendimiento, usuarios activos) y opciones de navegación.
+   - **Acción Primaria**: Seleccionar un portafolio para ver detalles.
+   - **Opciones Secundarias**: Ver historial de transacciones, acceder a configuración.
+
+3. **Detalle del Portafolio** (`E`)
+   - **Estado Default**: Información detallada del portafolio seleccionado, incluyendo activos, valor actual y rendimiento histórico.
+   - **Estado Loading**: Indicador de carga mientras se calcula el rendimiento.
+   - **Estado Error**: Mensaje "Datos no disponibles" si el cálculo falla.
+   - **Acción Primaria**: Botón "Actualizar Rendimiento".
+
+4. **Cálculo de Rendimiento** (`F`)
+   - **Estado Default**: Proceso en segundo plano para calcular el rendimiento del portafolio.
+   - **Estado Éxito**: Visualización de resultados con gráficos y métricas.
+   - **Estado Error**: Pantalla de error con opción de reintentar.
+
+5. **Historial de Transacciones** (`I`)
+   - **Estado Default**: Lista de transacciones realizadas en el portafolio.
+   - **Acción Primaria**: Filtrar transacciones por fecha.
+   - **Opción Secundaria**: Exportar datos a CSV.
+
+6. **Pantalla de Configuración** (`L`)
+   - **Estado Default**: Opciones de configuración del usuario, como preferencias de notificaciones y ajustes de cuenta.
+   - **Acción Primaria**: Botón "Guardar Cambios".
+
+### **Puntos de Decisión y Estados de Error**
+- **Autenticación**: Si las credenciales son inválidas, el usuario es redirigido a la pantalla de error (`D`) con opción de reintentar.
+- **Cálculo de Rendimiento**: Si el cálculo falla, el usuario ve una pantalla de error (`H`) con detalles del problema y opción de reintentar.
+- **Exportación de Datos**: Después de filtrar transacciones, el usuario puede exportar los resultados. La exportación exitosa muestra una confirmación (`K`).
+
+### **Jerarquía Visual y Acciones Primarias**
+- **Dashboard Principal** (`C`): La acción primaria es seleccionar un portafolio. Las opciones secundarias (historial, configuración) están accesibles pero no destacan visualmente.
+- **Detalle del Portafolio** (`E`): La acción primaria es actualizar el rendimiento. El botón debe ser prominente y estar ubicado en un lugar accesible.
+- **Historial de Transacciones** (`I`): La acción primaria es filtrar por fecha. La opción de exportar datos es secundaria.
+
+### **Accesibilidad**
+- **Contraste**: Todos los textos tienen un contraste mínimo de 4.5:1 con respecto al fondo.
+- **Foco**: Los botones y campos interactivos tienen un estado de foco visible.
+- **Orden de Lectura**: El flujo sigue un orden lógico y coherente, desde la autenticación hasta la visualización de resultados.
+- **Alternativas Textuales**: Todos los diagramas y gráficos tienen descripciones textuales en los documentos correspondientes.
+
+### **Ejemplo de Tensión en el Flujo**
+- **Cuello de Botella en Cálculo de Rendimiento**: Si el proceso de cálculo (`F`) tarda más de 5 segundos, el usuario podría abandonar la pantalla. Esto se refleja en una alta tasa de rebote en esta sección del flujo.
+- **Errores en Autenticación**: Si el mensaje de error (`D`) no es claro, los usuarios podrían intentar múltiples veces sin éxito, aumentando la frustración y la tasa de rebote.
+
+Este flujo es la base para el análisis de métricas y las recomendaciones de diseño que se desarrollarán en las fases posteriores del proyecto.
